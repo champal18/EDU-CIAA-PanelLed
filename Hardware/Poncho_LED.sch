@@ -1,0 +1,1217 @@
+EESchema Schematic File Version 2
+LIBS:LED_MATRIX_RG_8x8
+LIBS:display_lcd
+LIBS:max
+LIBS:74xgxx
+LIBS:74xx
+LIBS:ac-dc
+LIBS:actel
+LIBS:adc-dac
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:cmos4000
+LIBS:conn
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:diode
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:Lattice
+LIBS:linear
+LIBS:logo
+LIBS:maxim
+LIBS:memory
+LIBS:microchip
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:microcontrollers
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:power
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:Xicor
+LIBS:xilinx
+LIBS:Zilog
+LIBS:Misc_Poncho_Grande
+LIBS:Poncho_Esqueleto
+LIBS:Poncho_LED-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Panel LED + Interfaz de usuario"
+Date "22 mar 2016"
+Rev "1.0"
+Comp "Proyecto CIAA - COMPUTADORA INDUSTRIAL ABIERTA ARGENTINA"
+Comment1 ""
+Comment2 "Universidad Nacional de La Plata"
+Comment3 "Autor del poncho (Labrune Juan Pablo,Campagna Cristian,Acuña Alejandro,Fuentes Facundo)"
+Comment4 "CÓDIGO PONCHO:"
+$EndDescr
+$Comp
+L OSHWA #G1
+U 1 1 560A0A28
+P 6600 7300
+F 0 "#G1" H 6570 7700 60  0001 C CNN
+F 1 "OSHWA" H 6600 7603 60  0001 C CNN
+F 2 "Poncho_Esqueleto:Logo_OSHWA" H 6600 7300 60  0001 C CNN
+F 3 "" H 6600 7300 60  0000 C CNN
+	1    6600 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 2 1 560EE110
+P 6150 2950
+F 0 "XA1" H 6000 3500 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 6450 3400 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 6000 3300 60  0001 C CNN
+F 3 "" H 6000 3300 60  0000 C CNN
+	2    6150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX7219 U1
+U 1 1 56C368C8
+P 7950 2000
+F 0 "U1" H 7940 3020 60  0000 C CNN
+F 1 "MAX7219" H 8100 2950 60  0000 C CNN
+F 2 "Housings_DIP:DIP-24_W7.62mm_LongPads" H 7850 2000 60  0001 C CNN
+F 3 "" H 7850 2000 60  0000 C CNN
+	1    7950 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L LED_MATRIX_RGA_8x8 LEDMATX1
+U 1 1 56C37BE1
+P 10350 2550
+F 0 "LEDMATX1" V 11100 2550 60  0000 C CNN
+F 1 "LED_MATRIX_RGA_8x8" V 11000 2550 60  0000 C CNN
+F 2 "libraries-master:LED_ALE" H 10350 2550 60  0001 C CNN
+F 3 "" H 10350 2550 60  0000 C CNN
+	1    10350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L DISPLAY_HD44780 D_LCD1
+U 1 1 56C387FF
+P 3700 1100
+F 0 "D_LCD1" H 4300 650 60  0000 C CNN
+F 1 "DISPLAY_HD44780" H 3450 1500 60  0000 C CNN
+F 2 "libraries-master:LCD-16x2" H 3700 1100 60  0001 C CNN
+F 3 "" H 3700 1100 60  0000 C CNN
+	1    3700 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q1
+U 1 1 56C38CBD
+P 8100 5000
+F 0 "Q1" H 8400 5050 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 8750 4950 50  0000 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 8300 5100 50  0001 C CNN
+F 3 "" H 8100 5000 50  0000 C CNN
+	1    8100 5000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q5
+U 1 1 56C39118
+P 9150 5300
+F 0 "Q5" H 9450 5350 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 9800 5250 50  0000 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 9350 5400 50  0001 C CNN
+F 3 "" H 9150 5300 50  0000 C CNN
+	1    9150 5300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q4
+U 1 1 56C3917D
+P 8100 5750
+F 0 "Q4" H 8400 5800 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 8750 5700 50  0000 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 8300 5850 50  0001 C CNN
+F 3 "" H 8100 5750 50  0000 C CNN
+	1    8100 5750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q6
+U 1 1 56C39183
+P 9150 6100
+F 0 "Q6" H 9450 6150 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 9800 6050 50  0000 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 9350 6200 50  0001 C CNN
+F 3 "" H 9150 6100 50  0000 C CNN
+	1    9150 6100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q2
+U 1 1 56C39215
+P 8100 4250
+F 0 "Q2" H 8400 4300 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 8750 4200 50  0000 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 8300 4350 50  0001 C CNN
+F 3 "" H 8100 4250 50  0000 C CNN
+	1    8100 4250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_DGS Q3
+U 1 1 56C3921B
+P 9150 4550
+F 0 "Q3" H 9450 4600 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 9800 4500 50  0000 R CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 9350 4650 50  0001 C CNN
+F 3 "" H 9150 4550 50  0000 C CNN
+	1    9150 4550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW3
+U 1 1 56C3944F
+P 1650 5350
+F 0 "SW3" H 1800 5460 50  0000 C CNN
+F 1 "SW_PUSH" H 1650 5270 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 1650 5350 50  0001 C CNN
+F 3 "" H 1650 5350 50  0000 C CNN
+	1    1650 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW7
+U 1 1 56C397BA
+P 2350 5350
+F 0 "SW7" H 2500 5460 50  0000 C CNN
+F 1 "SW_PUSH" H 2350 5270 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 2350 5350 50  0001 C CNN
+F 3 "" H 2350 5350 50  0000 C CNN
+	1    2350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW11
+U 1 1 56C3981D
+P 3050 5350
+F 0 "SW11" H 3200 5460 50  0000 C CNN
+F 1 "SW_PUSH" H 3050 5270 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 3050 5350 50  0001 C CNN
+F 3 "" H 3050 5350 50  0000 C CNN
+	1    3050 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW4
+U 1 1 56C39C6A
+P 1650 5700
+F 0 "SW4" H 1800 5810 50  0000 C CNN
+F 1 "SW_PUSH" H 1650 5620 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 1650 5700 50  0001 C CNN
+F 3 "" H 1650 5700 50  0000 C CNN
+	1    1650 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW8
+U 1 1 56C39C70
+P 2350 5700
+F 0 "SW8" H 2500 5810 50  0000 C CNN
+F 1 "SW_PUSH" H 2350 5620 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 2350 5700 50  0001 C CNN
+F 3 "" H 2350 5700 50  0000 C CNN
+	1    2350 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW12
+U 1 1 56C39C76
+P 3050 5700
+F 0 "SW12" H 3200 5810 50  0000 C CNN
+F 1 "SW_PUSH" H 3050 5620 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 3050 5700 50  0001 C CNN
+F 3 "" H 3050 5700 50  0000 C CNN
+	1    3050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW1
+U 1 1 56C39DBC
+P 1650 4650
+F 0 "SW1" H 1800 4760 50  0000 C CNN
+F 1 "SW_PUSH" H 1650 4570 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 1650 4650 50  0001 C CNN
+F 3 "" H 1650 4650 50  0000 C CNN
+	1    1650 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW5
+U 1 1 56C39DC2
+P 2350 4650
+F 0 "SW5" H 2500 4760 50  0000 C CNN
+F 1 "SW_PUSH" H 2350 4570 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 2350 4650 50  0001 C CNN
+F 3 "" H 2350 4650 50  0000 C CNN
+	1    2350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW9
+U 1 1 56C39DC8
+P 3050 4650
+F 0 "SW9" H 3200 4760 50  0000 C CNN
+F 1 "SW_PUSH" H 3050 4570 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 3050 4650 50  0001 C CNN
+F 3 "" H 3050 4650 50  0000 C CNN
+	1    3050 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW2
+U 1 1 56C39DCE
+P 1650 5000
+F 0 "SW2" H 1800 5110 50  0000 C CNN
+F 1 "SW_PUSH" H 1650 4920 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 1650 5000 50  0001 C CNN
+F 3 "" H 1650 5000 50  0000 C CNN
+	1    1650 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW6
+U 1 1 56C39DD4
+P 2350 5000
+F 0 "SW6" H 2500 5110 50  0000 C CNN
+F 1 "SW_PUSH" H 2350 4920 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 2350 5000 50  0001 C CNN
+F 3 "" H 2350 5000 50  0000 C CNN
+	1    2350 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_PUSH SW10
+U 1 1 56C39DDA
+P 3050 5000
+F 0 "SW10" H 3200 5110 50  0000 C CNN
+F 1 "SW_PUSH" H 3050 4920 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 3050 5000 50  0001 C CNN
+F 3 "" H 3050 5000 50  0000 C CNN
+	1    3050 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 56C3A23D
+P 7700 3200
+F 0 "R1" V 7780 3200 50  0000 C CNN
+F 1 "27 kΩ" V 7700 3200 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 7630 3200 50  0001 C CNN
+F 3 "" H 7700 3200 50  0000 C CNN
+	1    7700 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 56C3A5BE
+P 8400 5550
+F 0 "R3" V 8480 5550 50  0000 C CNN
+F 1 "10 kΩ" V 8400 5550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 8330 5550 50  0001 C CNN
+F 3 "" H 8400 5550 50  0000 C CNN
+	1    8400 5550
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R5
+U 1 1 56C3A65D
+P 8400 3950
+F 0 "R5" V 8480 3950 50  0000 C CNN
+F 1 "10 kΩ" V 8400 3950 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 8330 3950 50  0001 C CNN
+F 3 "" H 8400 3950 50  0000 C CNN
+	1    8400 3950
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R7
+U 1 1 56C3A663
+P 9400 4250
+F 0 "R7" V 9480 4250 50  0000 C CNN
+F 1 "10 kΩ" V 9400 4250 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 9330 4250 50  0001 C CNN
+F 3 "" H 9400 4250 50  0000 C CNN
+	1    9400 4250
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 56C3A6EB
+P 1650 4250
+F 0 "R2" V 1730 4250 50  0000 C CNN
+F 1 "10 kΩ" V 1650 4250 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 1580 4250 50  0001 C CNN
+F 3 "" H 1650 4250 50  0000 C CNN
+	1    1650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 56C3A6F1
+P 2400 4250
+F 0 "R4" V 2480 4250 50  0000 C CNN
+F 1 "10 kΩ" V 2400 4250 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 2330 4250 50  0001 C CNN
+F 3 "" H 2400 4250 50  0000 C CNN
+	1    2400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 56C3A6F7
+P 3100 4250
+F 0 "R6" V 3180 4250 50  0000 C CNN
+F 1 "10 kΩ" V 3100 4250 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 3030 4250 50  0001 C CNN
+F 3 "" H 3100 4250 50  0000 C CNN
+	1    3100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 56C3A6FD
+P 9400 5000
+F 0 "R8" V 9480 5000 50  0000 C CNN
+F 1 "10 kΩ" V 9400 5000 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 9330 5000 50  0001 C CNN
+F 3 "" H 9400 5000 50  0000 C CNN
+	1    9400 5000
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R9
+U 1 1 56C3A7A7
+P 9400 5750
+F 0 "R9" V 9480 5750 50  0000 C CNN
+F 1 "10 kΩ" V 9400 5750 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 9330 5750 50  0001 C CNN
+F 3 "" H 9400 5750 50  0000 C CNN
+	1    9400 5750
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R10
+U 1 1 56C3A7AD
+P 8400 4800
+F 0 "R10" V 8480 4800 50  0000 C CNN
+F 1 "10 kΩ" V 8400 4800 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 8330 4800 50  0001 C CNN
+F 3 "" H 8400 4800 50  0000 C CNN
+	1    8400 4800
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 8 1 56C40E90
+P 1500 6350
+F 0 "XA1" H 1500 6900 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 1500 6800 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 1350 6700 60  0001 C CNN
+F 3 "" H 1350 6700 60  0000 C CNN
+	8    1500 6350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 56C4CFC4
+P 8200 3600
+F 0 "C1" H 8225 3700 50  0000 L CNN
+F 1 "0.1 µF" H 8225 3500 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 8238 3450 50  0001 C CNN
+F 3 "" H 8200 3600 50  0000 C CNN
+	1    8200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C2
+U 1 1 56C4DCC3
+P 8550 3600
+F 0 "C2" H 8575 3700 50  0000 L CNN
+F 1 "10 µF" H 8575 3500 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2.5" H 8550 3600 50  0001 C CNN
+F 3 "" H 8550 3600 50  0000 C CNN
+	1    8550 3600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3850 1450
+NoConn ~ 3750 1450
+NoConn ~ 3650 1450
+NoConn ~ 3550 1450
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 12 1 56C4C484
+P 2450 2650
+F 0 "XA1" H 2450 3200 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 2450 3100 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 2300 3000 60  0000 C CNN
+F 3 "" H 2300 3000 60  0000 C CNN
+	12   2450 2650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2850 2800
+NoConn ~ 7550 2050
+NoConn ~ 4200 4850
+$Comp
+L POT RV1
+U 1 1 56C3A96B
+P 4450 1850
+F 0 "RV1" H 4450 1750 50  0000 C CNN
+F 1 "10 kΩ" H 4450 1850 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_3006P_Angular_ScrewFront" H 4450 1850 50  0001 C CNN
+F 3 "" H 4450 1850 50  0000 C CNN
+	1    4450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 11 1 56CEB8E0
+P 5800 1050
+F 0 "XA1" H 5800 1600 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 5800 1500 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 5650 1400 60  0000 C CNN
+F 3 "" H 5650 1400 60  0000 C CNN
+	11   5800 1050
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 5350 750 
+NoConn ~ 5350 950 
+NoConn ~ 5350 1050
+NoConn ~ 5350 1150
+NoConn ~ 5350 1250
+NoConn ~ 5350 1350
+NoConn ~ 5350 1450
+NoConn ~ 5350 1550
+NoConn ~ 5700 2650
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 3 1 56C5F2C6
+P 1250 3150
+F 0 "XA1" H 1250 3700 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 1250 3600 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 1100 3500 60  0000 C CNN
+F 3 "" H 1100 3500 60  0000 C CNN
+	3    1250 3150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1650 3150
+NoConn ~ 1650 3250
+$Comp
+L SW_PUSH SW13
+U 1 1 56C5F71F
+P 2550 3550
+F 0 "SW13" H 2700 3660 50  0000 C CNN
+F 1 "SW_PUSH" H 2550 3470 50  0000 C CNN
+F 2 "Buttons_Switches_ThroughHole:SW_PUSH_SMALL" H 2550 3550 50  0000 C CNN
+F 3 "" H 2550 3550 50  0000 C CNN
+	1    2550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 56C5F7E8
+P 2100 3200
+F 0 "R11" H 2180 3200 50  0000 C CNN
+F 1 "10 kΩ" V 2100 3200 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 2030 3200 50  0000 C CNN
+F 3 "" H 2100 3200 50  0000 C CNN
+	1    2100 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L R R12
+U 1 1 56C673D1
+P 7050 4800
+F 0 "R12" V 7130 4800 50  0000 C CNN
+F 1 "10 kΩ" V 7050 4800 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 6980 4800 50  0000 C CNN
+F 3 "" H 7050 4800 50  0000 C CNN
+	1    7050 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 56C818A8
+P 5500 3550
+F 0 "#PWR01" H 5500 3300 50  0001 C CNN
+F 1 "GND" H 5500 3400 50  0000 C CNN
+F 2 "" H 5500 3550 50  0000 C CNN
+F 3 "" H 5500 3550 50  0000 C CNN
+	1    5500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 10 1 56C8EAB1
+P 3850 4750
+F 0 "XA1" H 3850 5300 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 3850 5200 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 3700 5100 60  0001 C CNN
+F 3 "" H 3700 5100 60  0000 C CNN
+	10   3850 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 9 1 56C8EB6C
+P 5750 6000
+F 0 "XA1" H 5750 6550 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 5750 6450 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 5600 6350 60  0001 C CNN
+F 3 "" H 5600 6350 60  0000 C CNN
+	9    5750 6000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6250 5900
+NoConn ~ 6250 6100
+NoConn ~ 6250 6200
+NoConn ~ 5300 6200
+NoConn ~ 5300 6100
+NoConn ~ 5300 6000
+NoConn ~ 5300 5900
+NoConn ~ 5300 5800
+$Comp
+L Conn_PonchoMP_2x_20x2 XA1
+U 1 1 560E549A
+P 4500 2950
+F 0 "XA1" H 4350 3500 60  0000 C CNN
+F 1 "Conn_PonchoMP_2x_20x2" H 4800 3350 60  0000 C CNN
+F 2 "Poncho_Esqueleto:Conn_Poncho_Mediano" H 5150 2500 60  0000 C CNN
+F 3 "" H 4350 3300 60  0000 C CNN
+	1    4500 2950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6600 2650
+$Comp
+L +5V #PWR02
+U 1 1 56C9A112
+P 3600 2150
+F 0 "#PWR02" H 3600 2000 50  0001 C CNN
+F 1 "+5V" H 3600 2290 50  0000 C CNN
+F 2 "" H 3600 2150 50  0000 C CNN
+F 3 "" H 3600 2150 50  0000 C CNN
+	1    3600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR03
+U 1 1 56C9A1AE
+P 2700 1550
+F 0 "#PWR03" H 2700 1400 50  0001 C CNN
+F 1 "+5V" H 2700 1690 50  0000 C CNN
+F 2 "" H 2700 1550 50  0000 C CNN
+F 3 "" H 2700 1550 50  0000 C CNN
+	1    2700 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5VA #PWR04
+U 1 1 56C8B374
+P 5100 1550
+F 0 "#PWR04" H 5100 1400 50  0001 C CNN
+F 1 "+5VA" H 5100 1690 50  0000 C CNN
+F 2 "" H 5100 1550 60  0000 C CNN
+F 3 "" H 5100 1550 60  0000 C CNN
+	1    5100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LOGO #G2
+U 1 1 56C8D24E
+P 5700 7100
+F 0 "#G2" H 5700 6697 60  0001 C CNN
+F 1 "LOGO" H 5700 7503 60  0001 C CNN
+F 2 "Poncho_Esqueleto:Logo_Poncho" H 5700 7100 60  0000 C CNN
+F 3 "" H 5700 7100 60  0000 C CNN
+	1    5700 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  4800 3350 4800
+Wire Wire Line
+	3100 4400 2750 4400
+Wire Wire Line
+	2400 4400 2050 4400
+Wire Wire Line
+	1650 4400 1350 4400
+Wire Wire Line
+	1350 4400 1350 6000
+Wire Wire Line
+	3350 4800 3350 4650
+Connection ~ 3350 4800
+Wire Wire Line
+	2650 4800 2650 4650
+Connection ~ 2650 4800
+Wire Wire Line
+	1950 4650 1950 4800
+Connection ~ 1950 4800
+Connection ~ 2750 4650
+Connection ~ 2750 5000
+Connection ~ 2050 4650
+Connection ~ 2050 5000
+Connection ~ 2050 5700
+Connection ~ 2050 5350
+Wire Wire Line
+	2050 4400 2050 6300
+Connection ~ 2050 5650
+Connection ~ 2750 5700
+Connection ~ 2750 5350
+Connection ~ 1350 4650
+Connection ~ 1350 5000
+Connection ~ 1350 5700
+Connection ~ 1350 5350
+Wire Wire Line
+	900  5150 3350 5150
+Wire Wire Line
+	3350 5150 3350 5000
+Connection ~ 3350 5150
+Wire Wire Line
+	2650 5150 2650 5000
+Connection ~ 2650 5150
+Wire Wire Line
+	1950 5000 1950 5150
+Connection ~ 1950 5150
+Wire Wire Line
+	950  5500 3350 5500
+Wire Wire Line
+	3350 5500 3350 5350
+Connection ~ 3350 5500
+Wire Wire Line
+	2650 5500 2650 5350
+Connection ~ 2650 5500
+Wire Wire Line
+	1950 5350 1950 5500
+Connection ~ 1950 5500
+Wire Wire Line
+	1000 5850 3350 5850
+Wire Wire Line
+	1950 5700 1950 5850
+Connection ~ 1950 5850
+Wire Wire Line
+	2650 5850 2650 5700
+Connection ~ 2650 5850
+Wire Wire Line
+	3350 5850 3350 5700
+Connection ~ 3350 5850
+Wire Wire Line
+	1350 6000 1950 6000
+Wire Wire Line
+	1950 6000 1950 6200
+Wire Wire Line
+	1950 6200 1900 6200
+Wire Wire Line
+	2050 6300 1900 6300
+Connection ~ 2050 6300
+Wire Wire Line
+	2750 4400 2750 6400
+Wire Wire Line
+	2750 6400 1900 6400
+Wire Wire Line
+	850  4800 850  6200
+Wire Wire Line
+	850  6200 1100 6200
+Wire Wire Line
+	900  5150 900  6300
+Wire Wire Line
+	900  6300 1100 6300
+Wire Wire Line
+	950  5500 950  6400
+Wire Wire Line
+	950  6400 1100 6400
+Wire Wire Line
+	1000 5850 1000 6500
+Wire Wire Line
+	1000 6500 1100 6500
+Wire Wire Line
+	1650 4100 3100 4100
+Connection ~ 2400 4100
+Wire Wire Line
+	3150 1450 3150 2700
+Wire Wire Line
+	3150 2700 2850 2700
+Wire Wire Line
+	3250 1450 3250 2600
+Wire Wire Line
+	3250 2600 2850 2600
+Wire Wire Line
+	3350 1450 3350 2500
+Wire Wire Line
+	3350 2500 2850 2500
+Wire Wire Line
+	3450 1450 3450 2400
+Wire Wire Line
+	3450 2400 2850 2400
+Wire Wire Line
+	4150 1450 4150 2100
+Wire Wire Line
+	4150 2100 5200 2100
+Wire Wire Line
+	5200 2100 5200 850 
+Wire Wire Line
+	5200 850  5350 850 
+Wire Wire Line
+	5150 2700 4950 2700
+Wire Wire Line
+	5150 2200 5150 3450
+Wire Wire Line
+	4050 2400 5150 2400
+Wire Wire Line
+	3600 2800 4050 2800
+Wire Wire Line
+	2850 2900 3450 2900
+Wire Wire Line
+	3450 2900 3450 2600
+Wire Wire Line
+	3450 2600 3950 2600
+Wire Wire Line
+	3950 2600 3950 1450
+Wire Wire Line
+	4050 2700 3700 2700
+Wire Wire Line
+	3700 2700 3700 3900
+Wire Wire Line
+	3700 3900 2400 3900
+Wire Wire Line
+	2400 3900 2400 4100
+Wire Wire Line
+	7550 1850 7250 1850
+Wire Wire Line
+	7250 1850 7250 3950
+Wire Wire Line
+	7250 3950 8250 3950
+Wire Wire Line
+	8000 4050 8000 3950
+Connection ~ 8000 3950
+Wire Wire Line
+	8300 4250 9250 4250
+Wire Wire Line
+	8300 5000 9250 5000
+Wire Wire Line
+	8300 5750 9250 5750
+Wire Wire Line
+	9050 4350 9050 4250
+Connection ~ 9050 4250
+Wire Wire Line
+	9050 5100 9050 5000
+Connection ~ 9050 5000
+Wire Wire Line
+	9050 5900 9050 5750
+Connection ~ 9050 5750
+Wire Wire Line
+	9850 4250 9550 4250
+Wire Wire Line
+	9850 3200 9850 5750
+Wire Wire Line
+	9850 3950 8550 3950
+Wire Wire Line
+	9850 5000 9550 5000
+Connection ~ 9850 4250
+Wire Wire Line
+	9850 5750 9550 5750
+Connection ~ 9850 5000
+Wire Wire Line
+	6700 4450 8000 4450
+Wire Wire Line
+	6700 3450 6700 4450
+Wire Wire Line
+	5150 3450 6700 3450
+Connection ~ 5150 2700
+Wire Wire Line
+	7850 4450 7850 6300
+Wire Wire Line
+	7850 5200 8000 5200
+Connection ~ 7850 4450
+Wire Wire Line
+	7850 5950 8000 5950
+Connection ~ 7850 5200
+Wire Wire Line
+	8800 4550 8800 4750
+Wire Wire Line
+	8800 4550 7850 4550
+Connection ~ 7850 4550
+Wire Wire Line
+	9050 5500 8850 5500
+Wire Wire Line
+	8850 5500 8850 5300
+Wire Wire Line
+	8850 5300 7850 5300
+Connection ~ 7850 5300
+Connection ~ 7850 5950
+Wire Wire Line
+	7400 4800 8250 4800
+Wire Wire Line
+	8550 4800 9850 4800
+Connection ~ 9850 4800
+Wire Wire Line
+	7500 5550 8250 5550
+Connection ~ 9850 5550
+Wire Wire Line
+	9350 4550 10100 4550
+Wire Wire Line
+	10100 4550 10100 6350
+Wire Wire Line
+	10100 6350 6550 6350
+Wire Wire Line
+	6550 6350 6550 4750
+Wire Wire Line
+	6550 4750 4700 4750
+Wire Wire Line
+	7400 1950 7400 4800
+Wire Wire Line
+	7400 1950 7550 1950
+Connection ~ 8000 4800
+Wire Wire Line
+	9350 5300 10250 5300
+Wire Wire Line
+	10250 5300 10250 6400
+Wire Wire Line
+	10250 6400 6400 6400
+Wire Wire Line
+	9350 6100 9700 6100
+Wire Wire Line
+	9700 6100 9700 6450
+Wire Wire Line
+	9700 6450 4300 6450
+Wire Wire Line
+	4300 6450 4300 4750
+Wire Wire Line
+	7550 2150 7500 2150
+Wire Wire Line
+	7500 2150 7500 5550
+Connection ~ 8000 5550
+Wire Wire Line
+	6950 2300 6950 3450
+Wire Wire Line
+	6950 2300 5500 2300
+Wire Wire Line
+	5500 2000 5500 2750
+Wire Wire Line
+	5500 2750 5700 2750
+Wire Wire Line
+	7900 850  7900 1000
+Wire Wire Line
+	6600 850  7900 850 
+Wire Wire Line
+	6600 850  6600 2200
+Wire Wire Line
+	6600 2200 5150 2200
+Connection ~ 5150 2400
+Wire Wire Line
+	7800 1000 7800 850 
+Connection ~ 7800 850 
+Wire Wire Line
+	7850 6300 9050 6300
+Wire Wire Line
+	8800 4750 9050 4750
+Wire Wire Line
+	1650 3050 1950 3050
+Wire Wire Line
+	1950 3050 1950 3200
+Wire Wire Line
+	2250 3200 2250 3550
+Wire Wire Line
+	2850 3550 5500 3550
+Wire Wire Line
+	5250 3550 5250 3450
+Connection ~ 5250 3450
+Wire Wire Line
+	8200 3450 8200 3400
+Wire Wire Line
+	8200 3400 8550 3400
+Wire Wire Line
+	8550 3400 8550 3450
+Wire Wire Line
+	7850 3000 7850 3200
+Wire Wire Line
+	7850 3200 9850 3200
+Wire Wire Line
+	8400 3200 8400 3400
+Connection ~ 8400 3400
+Wire Wire Line
+	7550 2750 7550 3050
+Wire Wire Line
+	7550 3050 7700 3050
+Wire Wire Line
+	7700 3350 7950 3350
+Wire Wire Line
+	7950 3350 7950 3200
+Connection ~ 7950 3200
+Wire Wire Line
+	8200 3750 8200 3800
+Wire Wire Line
+	8200 3800 8550 3800
+Wire Wire Line
+	8550 3800 8550 3750
+Wire Wire Line
+	8100 3200 8100 3450
+Wire Wire Line
+	8100 3450 6950 3450
+Connection ~ 8100 3200
+Wire Wire Line
+	6700 3850 8400 3850
+Wire Wire Line
+	8400 3850 8400 3800
+Connection ~ 8400 3800
+Connection ~ 6700 3850
+Wire Wire Line
+	7200 4800 7300 4800
+Wire Wire Line
+	7300 4800 7300 4600
+Wire Wire Line
+	7300 4600 7400 4600
+Connection ~ 7400 4600
+Wire Wire Line
+	6900 4800 6900 4450
+Connection ~ 6900 4450
+Wire Wire Line
+	8550 5550 9850 5550
+Connection ~ 9850 3950
+Connection ~ 8400 3200
+Wire Wire Line
+	4450 1450 4900 1450
+Wire Wire Line
+	4900 1450 4900 2400
+Connection ~ 4900 2400
+Wire Wire Line
+	4350 1450 4350 1600
+Wire Wire Line
+	4350 1600 5100 1600
+Wire Wire Line
+	5100 1550 5100 2000
+Wire Wire Line
+	4200 2000 5500 2000
+Connection ~ 5500 2300
+Wire Wire Line
+	4250 1450 4250 1700
+Wire Wire Line
+	4250 1700 4450 1700
+Wire Wire Line
+	4200 1850 4200 2000
+Connection ~ 5100 2000
+Connection ~ 4900 1850
+Wire Wire Line
+	4700 1850 4900 1850
+Wire Wire Line
+	2950 1450 2950 1900
+Connection ~ 4050 1900
+Wire Wire Line
+	2950 1900 4050 1900
+Wire Wire Line
+	4050 1450 4050 2400
+Wire Wire Line
+	8350 1200 9800 1200
+Wire Wire Line
+	8350 1900 9300 1900
+Wire Wire Line
+	9300 1900 9300 1100
+Wire Wire Line
+	9300 1100 9950 1100
+Wire Wire Line
+	9950 1100 9950 1600
+Wire Wire Line
+	8350 1800 9200 1800
+Wire Wire Line
+	9200 1800 9200 1000
+Wire Wire Line
+	9200 1000 10100 1000
+Wire Wire Line
+	10100 1000 10100 1600
+Wire Wire Line
+	8350 1700 9100 1700
+Wire Wire Line
+	9100 1700 9100 900 
+Wire Wire Line
+	9100 900  10250 900 
+Wire Wire Line
+	10250 900  10250 1600
+Wire Wire Line
+	8350 1600 9000 1600
+Wire Wire Line
+	9000 1600 9000 800 
+Wire Wire Line
+	9000 800  10400 800 
+Wire Wire Line
+	10400 800  10400 1600
+Wire Wire Line
+	8350 1500 8900 1500
+Wire Wire Line
+	8900 1500 8900 700 
+Wire Wire Line
+	8900 700  10550 700 
+Wire Wire Line
+	10550 700  10550 1600
+Wire Wire Line
+	8350 1400 8800 1400
+Wire Wire Line
+	8800 1400 8800 600 
+Wire Wire Line
+	8800 600  10700 600 
+Wire Wire Line
+	10700 600  10700 1600
+Wire Wire Line
+	8350 1300 8700 1300
+Wire Wire Line
+	8700 1300 8700 550 
+Wire Wire Line
+	8700 550  10850 550 
+Wire Wire Line
+	10850 550  10850 1600
+Wire Wire Line
+	9800 1200 9800 1600
+Wire Wire Line
+	8350 2800 9300 2800
+Wire Wire Line
+	9300 2800 9300 2000
+Wire Wire Line
+	9300 2000 9400 2000
+Wire Wire Line
+	8350 2700 9200 2700
+Wire Wire Line
+	9200 2700 9200 2150
+Wire Wire Line
+	9200 2150 9400 2150
+Wire Wire Line
+	8350 2600 9150 2600
+Wire Wire Line
+	9150 2600 9150 2300
+Wire Wire Line
+	9150 2300 9400 2300
+Wire Wire Line
+	8350 2500 9100 2500
+Wire Wire Line
+	9100 2500 9100 2450
+Wire Wire Line
+	9100 2450 9400 2450
+Wire Wire Line
+	8350 2400 9050 2400
+Wire Wire Line
+	9050 2400 9050 2550
+Wire Wire Line
+	9050 2550 9400 2550
+Wire Wire Line
+	9400 2550 9400 2600
+Wire Wire Line
+	8350 2300 8950 2300
+Wire Wire Line
+	8950 2300 8950 2750
+Wire Wire Line
+	8950 2750 9400 2750
+Wire Wire Line
+	8350 2200 8850 2200
+Wire Wire Line
+	8850 2200 8850 2900
+Wire Wire Line
+	8850 2900 9400 2900
+Wire Wire Line
+	8350 2100 8750 2100
+Wire Wire Line
+	8750 2100 8750 3050
+Wire Wire Line
+	8750 3050 9400 3050
+Connection ~ 5250 3550
+Wire Wire Line
+	4300 4750 4200 4750
+Wire Wire Line
+	4700 4750 4700 4650
+Wire Wire Line
+	4700 4650 4200 4650
+Wire Wire Line
+	6400 6400 6400 6000
+Wire Wire Line
+	6400 6000 6250 6000
+Wire Wire Line
+	6600 2750 6600 3450
+Connection ~ 6600 2850
+Connection ~ 6600 2950
+Connection ~ 6600 3050
+Connection ~ 6600 3150
+Wire Wire Line
+	5700 2850 5700 3450
+Connection ~ 5700 3050
+Connection ~ 5700 2950
+Connection ~ 6600 3450
+Connection ~ 6600 3250
+Connection ~ 5700 3450
+Connection ~ 5700 3150
+Wire Wire Line
+	4050 2900 4050 3550
+Connection ~ 4050 3000
+Connection ~ 4050 3100
+Connection ~ 4050 3550
+Connection ~ 4050 3200
+Wire Wire Line
+	4950 2700 4950 3200
+Connection ~ 4950 2900
+Connection ~ 4950 3000
+Connection ~ 4950 3100
+Connection ~ 4950 2800
+Connection ~ 4950 2700
+Connection ~ 4450 1450
+Wire Wire Line
+	2700 1550 2700 1650
+Wire Wire Line
+	2700 1650 3050 1650
+Wire Wire Line
+	3050 1650 3050 1450
+Wire Wire Line
+	3600 2150 3600 2800
+Connection ~ 5100 1600
+$EndSCHEMATC

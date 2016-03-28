@@ -1,0 +1,15 @@
+﻿PONCHO LED+INTERFAZ DE USUARIO
+Poncho para mostrar mensaje a traves de una matriz led 8x8 incluido en el mismo.
+La interfaz de usuario consta de 12 botones y un display lcd en el que se visualiza el mensaje que se 
+enviara al panel LED
+
+URL: (URL en la wiki de la CIAA)
+
+
+
+AUTORES/INSTITUCIONES: 
+LABRUNE JUAN PABLO	
+FUENTES FACUNDO
+CAMPAGNA CRISTIAN
+ACUÑA ALEJANDRO
+UNLP.FACULTAD DE INGENIERIA
